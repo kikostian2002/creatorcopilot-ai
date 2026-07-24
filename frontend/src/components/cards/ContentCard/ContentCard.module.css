@@ -1,0 +1,45 @@
+.card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: box-shadow var(--transition-fast);
+}
+
+.card:hover { box-shadow: var(--shadow-sm); }
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platform {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status {
+  font-size: var(--text-xs);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.statusDraft     { background: #f3f4f6; color: var(--color-text-muted); }
+.statusReady     { background: #dcfce7; color: #15803d; }
+.statusScheduled { background: #dbeafe; color: #1d4ed8; }
+.statusPublished { background: #d1fae5; color: #065f46; }
+
+.title {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  font-weight: 500;
+  line-height: 1.4;
+}

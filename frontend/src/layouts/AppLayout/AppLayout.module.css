@@ -1,0 +1,111 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────── */
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-5);
+  margin-bottom: var(--space-6);
+  background: none;
+  border: none;
+  color: var(--sidebar-text);
+  text-align: left;
+  transition: opacity var(--transition-fast);
+}
+
+.brand:hover { opacity: 0.85; }
+
+.brandIcon {
+  width: 32px;
+  height: 32px;
+  background: var(--color-accent);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ── Nav ──────────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 0 var(--space-3);
+  flex: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--sidebar-text-muted);
+  font-size: var(--text-sm);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  text-decoration: none;
+}
+
+.navItem:hover {
+  background: var(--sidebar-active-bg);
+  color: var(--sidebar-text);
+  text-decoration: none;
+}
+
+.navItemActive {
+  background: var(--sidebar-active-bg);
+  color: var(--sidebar-text);
+}
+
+.navIcon {
+  width: 20px;
+  text-align: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.sidebarFooter {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.version {
+  font-size: var(--text-xs);
+  color: var(--sidebar-text-muted);
+}
+
+/* ── Main ─────────────────────────────────────────────────── */
+.main {
+  flex: 1;
+  background: var(--color-bg);
+  overflow-y: auto;
+  min-width: 0;
+}
